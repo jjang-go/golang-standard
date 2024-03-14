@@ -18,7 +18,7 @@ func (n *Network) registerDELETE(path string, handler ...gin.HandlerFunc) gin.IR
 	return n.engine.DELETE(path, handler...)
 }
 
-//response 형태 맞추기위한 util함수
+// response 형태 맞추기위한 util함수
 func (n *Network) okResponse(c *gin.Context, result interface{}) {
 	c.JSON(200, result)
 }
